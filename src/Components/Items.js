@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Items({ name, id, image, oldPrice, newPrice }) {
   return (
-    <div className="">
+    <div className="hover:scale-105 transition duration-500 cursor-pointer">
       <div>
         <img className="w-[250px]" src={image}></img>
       </div>
