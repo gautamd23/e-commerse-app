@@ -14,6 +14,7 @@ import Cart from "./Pages/Cart";
 import LoginSignUp from "./Pages/LoginSignUp";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import Footer from "./Components/Footer";
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
       <div className="">
         <Navbar />
         <Outlet/>
+        <Footer/>
       </div>
     </Provider>
   );
