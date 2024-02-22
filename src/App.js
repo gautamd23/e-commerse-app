@@ -15,16 +15,18 @@ import LoginSignUp from "./Pages/LoginSignUp";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Footer from "./Components/Footer";
+import ShopContextProvider from "./Context/ShopContext";
 
 function App() {
-  
   return (
     <Provider store={appStore}>
-      <div className="">
-        <Navbar />
-        <Outlet/>
-        <Footer/>
-      </div>
+      <ShopContextProvider>
+        <div className="">
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </div>
+      </ShopContextProvider>
     </Provider>
   );
 }
