@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Items({ name, id, image, oldPrice, newPrice }) {
   return (
     <div className="hover:scale-105 transition duration-500 cursor-pointer">
       <div>
-        <img className="w-[250px]" src={image}></img>
+        <Link to={`/product/${id}`}><img className="w-[250px]" src={image}></img></Link>
       </div>
       <div>
         <h1 className="w-[225px] py-2">{name}</h1>
