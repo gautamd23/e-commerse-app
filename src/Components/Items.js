@@ -5,7 +5,7 @@ export default function Items({ name, id, image, oldPrice, newPrice }) {
   return (
     <div className="hover:scale-105 transition duration-500 cursor-pointer">
       <div>
-        <Link to={`/product/${id}`}><img className="w-[250px]" src={image}></img></Link>
+        <Link to={`/product/${id}`}><img onClick={window.scroll(0,0)} className="w-[250px]" src={image}></img></Link>
       </div>
       <div>
         <h1 className="w-[225px] py-2">{name}</h1>
