@@ -2,16 +2,17 @@ import React, { useContext, useState } from "react";
 import logo from "../assets/Assets/logo.png";
 import cartImg from "../assets/Assets/cart_icon.png";
 import { Link } from "react-router-dom";
+import logo2 from '../assets/Assets/logo2.png'
 import { ShopContext } from "../../Context/ShopContext";
 
 export default function Navbar() {
   const [menu, setMenu] = useState("shop");
   const {getTotalCartItems} = useContext(ShopContext)
   return (
-    <div className="flex items-center justify-center px-5 shadow-md py-3 gap-56">
+    <div className="flex  items-center justify-center px-5 shadow-md py-3 gap-56">
       <div className="flex items-center gap-4 text-3xl">
-        <img src={logo}></img>
-        <h1>Shopify</h1>
+        <img className="w-12" src={logo2}></img>
+        <h1 className="font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-red-600 to-blue-300">Clothify</h1>
       </div>
       <div>
         <ul className="flex gap-11 text-xl">
@@ -33,7 +34,7 @@ export default function Navbar() {
               hover:text-gray-500 
               
               hover:duration-300  
-              cursor-pointer`}
+              cursor-pointer `}
           >
             <Link to="/mens">Men</Link>
           </li>

@@ -3,7 +3,7 @@ import heroImg from "./assets/Assets/hero_image.png";
 import hand from "./assets/Assets/hand_icon.png";
 export default function Hero() {
   return (
-    <div className="flex py-20 justify-center items-center gap-52 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 ">
+    <div className="flex  py-20 justify-center items-center gap-52 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 ">
       <div>
         <div className="my-3">
           <h1 className="font-bold text-xl">NEW ARIVALS ONLY</h1>
