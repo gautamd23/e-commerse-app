@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import starIcon from "./assets/Assets/star_icon.png";
 import startDull from "./assets/Assets/star_dull_icon.png";
+import { ShopContext } from "../Context/ShopContext";
 
 export default function ProductDisplay({ product }) {
+
+  const {addToCart}  = useContext(ShopContext)
+
   return (
     <div className="px-16 flex justify-center gap-10 ">
       <div className="grid  grid-flow-col  w-1/2 justify-center ">
@@ -55,7 +59,7 @@ export default function ProductDisplay({ product }) {
           </ul>
         </div>
         <div className="mt-2">
-          <button className="py-3 px-6 bg-red-600 text-white font-bold">ADD TO CART</button>
+          <button onClick={()=>addToCart(product.id)} className="py-3 px-6 bg-red-600 text-white font-bold">ADD TO CART</button>
         </div>
         <div className="mt-6">
           <p>
