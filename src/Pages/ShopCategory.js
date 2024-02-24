@@ -5,7 +5,7 @@ import dropIcon from "../Components/assets/Assets/dropdown_icon.png";
 
 export default function ShopCategory(props) {
   const { allProducts } = useContext(ShopContext);
-  console.log(allProducts);
+ 
   return (
     <div className="flex flex-col justify-center items-center gap-6">
       <div className="flex justify-center">

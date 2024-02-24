@@ -3,7 +3,7 @@ import { ShopContext } from "../Context/ShopContext";
 import removeIcon from "./assets/Assets/cart_cross_icon.png";
 
 export default function CartItems() {
-  const { getTotalAmount ,allProducts, cartItems, removeFromCart } = useContext(ShopContext);
+  const { allProducts, cartItems, removeFromCart,getTotalAmount  } = useContext(ShopContext);
 
   return (
     <div className="flex flex-col  justify-center  py-16 w-full px-20">
@@ -52,6 +52,7 @@ export default function CartItems() {
               </>
             );
           }
+          return null
         })}
       </div>
       <div className="flex gap-20 justify-between  py-16">
@@ -59,7 +60,7 @@ export default function CartItems() {
             <h1 className="text-2xl font-bold py-4">Cart Totals</h1>
             <div className="flex justify-between py-3">
                 <p>SubTotal</p>
-                <p>$0</p>
+                <p>${getTotalAmount()}</p>
                 
             </div>
             <hr className="border-2"></hr>
